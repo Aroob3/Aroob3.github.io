@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name | Mathematics Graduate, NUST</title>
+  <meta name="description" content="Mathematics graduate from NUST working on Noether symmetries, and an online maths tutor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HOW TO EDIT: search this file for "Your Name", "your@email.com"
+       and anything in [square brackets], and replace with your details. -->
+
+  <header class="site-header">
+    <a class="logo" href="#top">Your Name</a>
+    <nav>
+      <a href="#fyp">Research</a>
+      <a href="#tutoring">Tutoring</a>
+      <a href="#beyond">Beyond maths</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Every symmetry hides a conservation law.</h1>
+        <p class="lead">
+          I'm Aroob Saeed, a mathematics graduate from NUST (2025). I study how symmetry
+          explains what stays constant in a changing world, and I teach maths online.
+        </p>
+        <p class="actions">
+          <a class="btn" href="#fyp">Read about my research</a>
+          <a class="btn btn-quiet" href="#contact">Get in touch</a>
+        </p>
+      </div>
+
+      <figure class="rosette" aria-label="A twelve-petal figure that looks identical after every 30 degree turn">
+        <svg viewBox="-100 -100 200 200" role="img" aria-hidden="true">
+          <defs>
+            <ellipse id="petal" cx="0" cy="-52" rx="13" ry="40"/>
+          </defs>
+          <g class="spin">
+            <use href="#petal" transform="rotate(0)"/>
+            <use href="#petal" transform="rotate(30)"/>
+            <use href="#petal" transform="rotate(60)"/>
+            <use href="#petal" transform="rotate(90)"/>
+            <use href="#petal" transform="rotate(120)"/>
+            <use href="#petal" transform="rotate(150)"/>
+            <use href="#petal" transform="rotate(180)"/>
+            <use href="#petal" transform="rotate(210)"/>
+            <use href="#petal" transform="rotate(240)"/>
+            <use href="#petal" transform="rotate(270)"/>
+            <use href="#petal" transform="rotate(300)"/>
+            <use href="#petal" transform="rotate(330)"/>
+          </g>
+          <circle r="5" class="dot"/>
+        </svg>
+        <figcaption>Turn it by 30°. Nothing changes. That is a symmetry.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="block">
+      <h2>About</h2>
+      <div class="prose">
+        <p>
+          I completed my Bachelor's in Mathematics at NUST in 2025. I like mathematics
+          most when it explains something, when a pile of equations turns out to be
+          one simple idea in disguise.
+        </p>
+        <p>
+          Right now I teach maths online and keep exploring the topics I enjoy.
+          [Add one sentence about what you want to do next: a master's, research,
+          data science, teaching...]
+        </p>
+      </div>
+    </section>
+
+    <!-- FINAL YEAR PROJECT -->
+    <section id="fyp" class="block">
+      <h2>Noether Symmetries of Lagrangians of Maximally Symmetric Spaces</h2>
+      <p class="kicker">Final year project, BS Mathematics, NUST</p>
+      <div class="prose">
+        <p>
+          Noether symmetries of many different Lagrangians have been found, and the
+          conserved quantities that come with them help us understand how a system
+          behaves.
+        </p>
+        <p>
+          In this project, I found the Noether symmetries of Lagrangians on manifolds
+          belonging to the class of spaces of constant curvature, also known as
+          maximally symmetric spaces. The curvature can take three kinds of value:
+        </p>
+      </div>
+
+      <dl class="pairs">
+        <div><dt>Positive curvature</dt><dd>Locally spherical</dd></div>
+        <div><dt>Zero curvature</dt><dd>Flat, Euclidean</dd></div>
+        <div><dt>Negative curvature</dt><dd>Locally hyperbolic</dd></div>
+      </dl>
+
+      <p class="links">
+        <a href="#">Download the report (PDF)</a>
+        <a href="#">Project slides</a>
+      </p>
+    </section>
+
+    <!-- TUTORING -->
+    <section id="tutoring" class="block">
+      <h2>Online tutoring</h2>
+      <div class="prose">
+        <p>
+          I teach [levels, e.g. O/A Levels, FSc, university calculus, linear algebra]
+          one-on-one over video call. I focus on understanding why a method works, so
+          students can solve questions they have never seen before.
+        </p>
+      </div>
+      <ul class="plain">
+        <li>[Subject 1, e.g. Calculus]</li>
+        <li>[Subject 2, e.g. Linear algebra]</li>
+        <li>[Subject 3, e.g. Exam preparation]</li>
+      </ul>
+      <p><a class="btn" href="mailto:your@email.com?subject=Tutoring%20enquiry">Ask about lessons</a></p>
+    </section>
+
+    <!-- BEYOND MATHS -->
+    <section id="beyond" class="block">
+      <h2>Beyond maths</h2>
+      <div class="trio">
+        <article>
+          <h3>Cooking</h3>
+          <p>[Your favourite dish to make, and why.]</p>
+        </article>
+        <article>
+          <h3>Books</h3>
+          <p>[What you are reading now, or a book you keep recommending.]</p>
+        </article>
+        <article>
+          <h3>Movies</h3>
+          <p>[A film you could watch again and again.]</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="block contact">
+      <h2>Contact</h2>
+      <p class="prose">For tutoring, collaboration or just to talk maths:</p>
+      <p class="big"><a href="mailto:dogararoob@email.com">your@email.com</a></p>
+      <p class="links">
+        <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
+        <a href="https://github.com/Aroob3">GitHub</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Your Name</p>
+  </footer>
+
+</body>
+</html>
