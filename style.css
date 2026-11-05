@@ -1,0 +1,190 @@
+/* ===== YOUR STYLE CONTROLS: change these values to restyle the whole site ===== */
+:root {
+  --bg: #e8eef1;
+  --ink: #12263a;
+  --muted: #4d6073;
+  --accent: #d98e04;
+  --accent-ink: #12263a;
+  --line: #b9c7d1;
+
+  --font-head: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1d2b;
+    --ink: #e6edf2;
+    --muted: #9db0bf;
+    --accent: #f2b233;
+    --accent-ink: #0f1d2b;
+    --line: #2b4156;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+a { color: inherit; text-underline-offset: 0.2em; }
+a:focus-visible, .btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 0;
+  font-family: var(--font-head);
+}
+.logo { font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+.site-header nav a { text-decoration: none; color: var(--muted); font-weight: 500; }
+.site-header nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Layout ---------- */
+main { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
+
+.block {
+  padding: 4rem 0;
+  border-top: 1px solid var(--line);
+}
+.block h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); max-width: 40rem; }
+.kicker { color: var(--muted); margin: -0.25rem 0 1.5rem; font-style: italic; }
+.prose { max-width: 38rem; }
+.prose p { margin: 0 0 1.1rem; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 4rem 0 5rem;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-weight: 700;
+}
+.lead { font-size: 1.25rem; color: var(--muted); max-width: 34rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.4rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--font-head);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.btn:hover { filter: brightness(1.08); }
+.btn-quiet {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+
+/* ---------- Rotating symmetric figure ---------- */
+.rosette { margin: 0; text-align: center; }
+.rosette svg { width: min(100%, 22rem); height: auto; }
+.rosette use {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.2;
+  opacity: 0.85;
+}
+.rosette .dot { fill: var(--accent); }
+.rosette figcaption {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.spin {
+  transform-origin: 0 0;
+  animation: turn 40s linear infinite;
+}
+@keyframes turn { to { transform: rotate(360deg); } }
+
+/* ---------- Research pairs ---------- */
+.pairs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0 1.5rem;
+}
+.pairs div { border-left: 3px solid var(--accent); padding-left: 1rem; }
+.pairs dt { color: var(--muted); font-size: 1rem; }
+.pairs dd {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* ---------- Lists, trio, links ---------- */
+.plain { padding-left: 1.2rem; margin: 1.5rem 0 2rem; }
+.plain li { margin-bottom: 0.3rem; }
+
+.trio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2.5rem;
+}
+.trio h3 { font-size: 1.4rem; }
+.trio p { margin: 0; color: var(--muted); }
+
+.links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; }
+.big {
+  font-family: var(--font-head);
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 700;
+  margin: 0.5rem 0 1.5rem;
+  word-break: break-word;
+}
+
+footer {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 0 3rem; }
+  .rosette { order: -1; }
+  .rosette svg { width: 14rem; }
+  .block { padding: 3rem 0; }
+}
+
+/* ---------- Respect people who turn animation off ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .spin { animation: none; }
+  html { scroll-behavior: auto; }
+}
